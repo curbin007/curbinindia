@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Purifier Distribution | Integrated Water Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .back-button a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #007bff;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            color: #0056b3;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            background-color: #ffffff;
+        }
+        
+        .text-section h1 {
+            color: #007bff;
+            font-size: 32px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .text-section h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .text-section h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #007bff;
+            font-weight: 500;
+        }
+        
+        .text-section p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .text-section ul {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .text-section ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .text-section ul li::before {
+            content: "\2022";
+            color: #007bff;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .image-section {
+            flex: 1;
+            min-height: 400px;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        
+            .image-section {
+                min-height: 300px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #007bff #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="back-button">
+            <a href="./index.html">&larr; Back</a>
+        </div>
+        <div class="content">
+            <div class="text-section">
+                <h1>Integrated Water Management</h1>
+                <h2>Water Purifier Distribution Program</h2>
+                <p>
+                    Access to clean water is fundamental for health and well-being. We have partnered with several trusted brands to offer high-quality water purifiers at a significantly reduced cost, ensuring that every household can enjoy safe drinking water.
+                </p>
+                <h3>OUR MISSION</h3>
+                <p>Provide safe, clean, and accessible drinking water to communities in need.</p>
+                <ul>
+                    <li>Accessibility: Ensuring that every household has access to clean and safe drinking water.</li>
+                    <li>Affordability: Providing water purifiers at a 50% discount to make them accessible to all.</li>
+                    <li>Sustainability: Promoting long-term water management practices to conserve and protect our water resources.</li>
+                </ul>
+            </div>
+            <div class="image-section">
+                <img src="./images/project12.jpg" class="fade-in" alt="Clean water being poured into a glass">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -100px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+</html>

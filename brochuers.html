@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional PDF Display</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            padding: 30px 0;
+        }
+        .pdf-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .pdf-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .pdf-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .pdf-card a {
+            display: inline-block;
+            color: #fff;
+            background: #007bff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .pdf-card a:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .back-button a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #007bff;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="back-button">
+        <a href="./index.html">&larr; Back</a>
+    </div>
+    <h1 class="mb-4">Download PDFs</h1>
+    <div class="row">
+        <!-- PDF 1 -->
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <div class="pdf-card">
+                <img src="./images/brochurecover.png" alt="PDF Cover 1" class="img-fluid">
+                <h4>Aquaguard Nova RO+UV MTDS</h4>
+                <a href="./pdf/Aquaguard Nova RO+UV MTDS.pdf" download="Aquaguard_Nova_RO+UV_MTDS.pdf">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- PDF 2 -->
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <div class="pdf-card">
+                <img src="./images/brochurecover.png" alt="PDF Cover 2" class="img-fluid">
+                <h4>Aquaguard Vector RO+UV</h4>
+                <a href="./pdf/Aquaguard Vector RO+UV.pdf" download="Aquaguard_Vector_RO+UV.pdf">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- PDF 3 -->
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <div class="pdf-card">
+                <img src="./images/brochurecover.png" alt="PDF Cover 3" class="img-fluid">
+                <h4>NGO Water Purifier (Malayalam)</h4>
+                <a href="./pdf/NGO_waterpurifier_ malayalam.pdf" download="NGO_waterpurifier_malayalam.pdf">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- PDF 4 -->
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <div class="pdf-card">
+                <img src="./images/brochurecover.png" alt="PDF Cover 4" class="img-fluid">
+                <h4>Nova Launch Deck RO+UV</h4>
+                <a href="./pdf/Nova Launch deck RO+UV direct sales.pdf" download="Nova_Launch_deck_RO+UV_direct_sales.pdf">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- PDF 5 -->
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+            <div class="pdf-card">
+                <img src="./images/brochurecover.png" alt="PDF Cover 5" class="img-fluid">
+                <h4>Vector V2 (E-leaflet)</h4>
+                <a href="./pdf/V2 Vector (E leaflet)-00.pdf" download="V2_Vector_E_leaflet.pdf">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
